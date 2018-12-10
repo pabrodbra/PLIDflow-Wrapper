@@ -16,6 +16,4 @@ while IFS=',' read -r PDB LIG
 do
     ${DOWNLOAD_SCRIPT} ${PDB} ${LIG} "${OUTPUT_PATH}/"
     ${PYMOL_SCRIPT} -- "${OUTPUT_PATH}/${PDB}.pdb" ${LIG} "${OUTPUT_PATH}/${PDB%.pdb}_Protein.pdb" > /dev/null
-    #"${PYMOL_SCRIPT} -- ${PDB} ${LIG} ${PDB%.pdb}_Protein.pdb"
-
 done < $PROTEING_LIGAND_LIST
